@@ -1,3 +1,10 @@
+//////
+// Generate Length of Pisano Period for a Given Modulo
+// Date: May 15, 2016
+// Version: C++ 11
+// Author: Paul Stey (translation of Jared Forsyth's Python code)
+//////
+
 #include <iostream>
 #include <vector>
 
@@ -25,7 +32,7 @@ int len_period(int mod) {
 }
 
 int main() {
-    unsigned long long m;
+    int m;
     std::cout << "Enter the modulo for which you want the lenght of its Pisano period: " << std::endl;
     std::cin >> m;
     std::cout << len_period(m) << '\n';
