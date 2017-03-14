@@ -26,12 +26,12 @@ std::vector<int> primes(int n) {
     	    int j = i+1;
 
     	    while (j <= n) {
-        		if (nums[j] != -1) {
-        		    if (nums[j]%nums[i] == 0) {
-            			nums[j] = -1;
-        		    }
-        		}
-        		j++;
+                if (nums[j] != -1) {
+                    if (nums[j]%nums[i] == 0) {
+                        nums[j] = -1;
+                    }
+                }
+                j++;
     	    }
     	}
     }
