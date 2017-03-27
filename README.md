@@ -1,4 +1,4 @@
-## AlgorithmEx
+## interesting_algorithms
 This repo houses some simple examples of interesting algorithms written in C++. The current contents include:
 - `pisano_period.cpp` This program generates the length of the [Pisano Period](https://en.wikipedia.org/wiki/Pisano_period) for a given modulo.
 
@@ -8,4 +8,4 @@ This repo houses some simple examples of interesting algorithms written in C++. 
 
 - `prime_sieve.cpp` This program is an implementation of the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) for finding prime numbers.
 
-- `randomwalk.cpp` In this program we compute the probability of a particle in N-dimensional space returning to the origin after some number of steps. The particle moves -1 or 1 in each direction (i.e., dimension) at each step. For dimensions 1 and 2, the probability is 1. In three dimensions, the probability is about 0.34, and as dimensions increase, the probability decreases.
+- `randomwalk.cpp` This program computes the probability that a particle in _N_-dimensional space returns to the origin after some number of steps. The particle moves -1 or 1 in each direction (i.e., dimension) at each step. For dimensions 1 and 2, the probability is 1. In three dimensions, the probability is about 0.34, and as dimensions increase, the probability decreases (see [Pólya's Constants](http://mathworld.wolfram.com/PolyasRandomWalkConstants.html)).
