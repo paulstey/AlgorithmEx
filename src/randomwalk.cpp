@@ -29,9 +29,6 @@ double rand_unif(std::default_random_engine &generator) {
 }
 
 
-
-
-
 int random_walk(int nstep, int dim, std::default_random_engine &generator) {
     std::vector<int> coords {0, 0, 0};
     bool res = 0;
@@ -56,7 +53,6 @@ double simulate(int nsim, int nstep, int dim) {
     int origin_visits = 0;
     std::random_device rd;
     std::default_random_engine generator(rd());
-
     
     for (i = 0; i < nsim; i++) {
 	origin_visits += random_walk(nstep, dim, generator);
@@ -69,7 +65,7 @@ double simulate(int nsim, int nstep, int dim) {
 
 int get_input(std::string request_string) {
     int res;
-    std::cout << request_string << std::endl;
+    std::cout << request_string;
     std::cin >> res;
     return res;
 }
@@ -85,5 +81,3 @@ int main() {
     double pr = simulate(nsim, nstep, dim);
     std::cout << "Pr(return to origin) = " << pr << std::endl;
 }
-
-    
