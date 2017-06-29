@@ -1,3 +1,4 @@
+
 // Random Walk
 // Compute probability of particle returning to origin in N dimensions
 // Author: Paul Stey
@@ -22,14 +23,14 @@ bool at_origin(std::vector<int> coords, int dim) {
 }
 
 
-double rand_unif(std::default_random_engine &generator) {
+double rand_unif(std::default_random_engine& generator) {
     std::uniform_real_distribution<double> distribution(0.0, 1.0);
     double number = distribution(generator);
     return number;
 }
 
 
-int random_walk(int nstep, int dim, std::default_random_engine &generator) {
+int random_walk(int nstep, int dim, std::default_random_engine& generator) {
     std::vector<int> coords {0, 0, 0};
     bool res = 0;
     int i, j, step;
