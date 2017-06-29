@@ -1,4 +1,3 @@
-
 // Random Walk
 // Compute probability of particle returning to origin in N dimensions
 // Author: Paul Stey
