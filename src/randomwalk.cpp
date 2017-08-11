@@ -4,9 +4,9 @@
 // Date: 2017-03-25
 // CXXFLAGS: -std=c++11
 
-#include<iostream>
-#include<vector>
-#include<random>
+#include <iostream>
+#include <vector>
+#include <random>
 
 
 bool at_origin(std::vector<int> coords, int dim) {
