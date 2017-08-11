@@ -3,9 +3,10 @@
 // prime numbers less than some value n;
 // Author: Paul Stey
 // Date: 2017-03-14
+// CXXFLAGS: -Wall -O3 -std=c++11 
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
 std::vector<int> get_nums(int n) {
     std::vector<int> nums(n+1);
