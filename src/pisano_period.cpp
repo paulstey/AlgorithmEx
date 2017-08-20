@@ -1,9 +1,7 @@
-//////
 // Generate Length of Pisano Period for a Given Modulo
 // Date: May 15, 2016
-// Version: C++ 11
+// CXXFLAGS: -Wall -std=c++11
 // Author: Paul Stey (translation of Jared Forsyth's Python code)
-//////
 
 #include <iostream>
 #include <vector>
