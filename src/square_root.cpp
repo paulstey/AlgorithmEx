@@ -1,5 +1,5 @@
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
+#include <cstdlib>
 
 double square_root(double s, double thresh) {
     double x_n = s;

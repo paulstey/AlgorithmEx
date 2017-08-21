@@ -2,7 +2,7 @@
 // Compute probability of particle returning to origin in N dimensions
 // Author: Paul Stey
 // Date: 2017-03-25
-// CXXFLAGS: -std=c++11
+// CXXFLAGS: -std=c++11 -Wall
 
 #include <iostream>
 #include <vector>
