@@ -11,8 +11,8 @@
 
 bool at_origin(std::vector<int> coords, int dim) {
     bool res = true;
-    int i;
-    for (i = 0; i < dim; i++) {
+
+    for (size_t i = 0; i < dim; i++) {
 	if (coords[i] != 0) {
 	    res = false;
 	    break;
@@ -32,10 +32,10 @@ double rand_unif(std::default_random_engine& generator) {
 int random_walk(int nstep, int dim, std::default_random_engine& generator) {
     std::vector<int> coords {0, 0, 0};
     bool res = 0;
-    int i, j, step;
+    int step;
 
-    for (i = 0; i < nstep; i++) {
-        for (j = 0; j < dim; j++) {
+    for (size_t i = 0; i < nstep; i++) {
+        for (size_t j = 0; j < dim; j++) {
 	    step = rand_unif(generator) < 0.5 ? -1 : 1;
 	    coords[j] += step;
 	}
@@ -49,12 +49,11 @@ int random_walk(int nstep, int dim, std::default_random_engine& generator) {
 
 
 double simulate(int nsim, int nstep, int dim) {
-    int i;
     int origin_visits = 0;
     std::random_device rd;
     std::default_random_engine generator(rd());
     
-    for (i = 0; i < nsim; i++) {
+    for (size_t i = 0; i < nsim; i++) {
 	origin_visits += random_walk(nstep, dim, generator);
     }
 
