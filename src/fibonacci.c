@@ -8,8 +8,7 @@ int fib(int n) {
     for (i = 2; i < n; i++) {
 	tmp = a;
 	a = b;
-	b = b + tmp;
-	
+	b = b + tmp;	
     }
     return b;
 }
@@ -22,6 +21,5 @@ int main(int argc, char* argv[]) {
 
     int res = fib(n);
     printf("%d \n", res);
-
 }
 
