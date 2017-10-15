@@ -15,9 +15,8 @@ int fib(int n) {
 
 
 int main(int argc, char* argv[]) {
-    int n;
-    printf("Which Fibonacci number would you like? ");
-    scanf("%d", &n);
+    int n = atoi(argv[1]);
+ 
 
     int res = fib(n);
     printf("%d \n", res);
