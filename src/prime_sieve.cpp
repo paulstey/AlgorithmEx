@@ -26,10 +26,10 @@ std::vector<int> primes(int n) {
     // loop index `j` in the nested loop is the key.
     for (i = 2; i*i <= n; i++) {
     	if (prime_flag[i] == true) {
-	    for (j = i*2; j <= n; j += i) {
-		prime_flag[j] = false;
-	    }
-	}
+            for (j = i*2; j <= n; j += i) {
+                prime_flag[j] = false;
+            }
+        }
     }
 
     // collect the non-crossed out integers (i.e., primes)
