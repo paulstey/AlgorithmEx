@@ -7,26 +7,24 @@
 
 #include <iostream>
 #include <vector>
+#include <numeric>   // for std::iota
 
 std::vector<int> get_nums(int n) {
     std::vector<int> nums(n+1);
-    for (int i = 0; i <= n; i++) {
-    	nums[i] = i;
-    }
+    std::iota(std::begin(nums), std::end(nums), 0);
     return nums;
 }
 
 
 std::vector<int> primes(int n) {
     std::vector<bool> prime_flag (n+1, true);
-    int i, j;
-
+    
     // Cross out non-primes by removing all multiples
     // of our existing primes. The incrementing of the
     // loop index `j` in the nested loop is the key.
-    for (i = 2; i*i <= n; i++) {
+    for (int i = 2; i*i <= n; i++) {
     	if (prime_flag[i] == true) {
-            for (j = i*2; j <= n; j += i) {
+            for (int j = i*2; j <= n; j += i) {
                 prime_flag[j] = false;
             }
         }
@@ -34,7 +32,7 @@ std::vector<int> primes(int n) {
 
     // collect the non-crossed out integers (i.e., primes)
     std::vector<int> res;
-    for (i = 2; i <= n; i++) {
+    for (int i = 2; i <= n; i++) {
     	if (prime_flag[i] == true) {
     	    res.push_back(i);
     	}
