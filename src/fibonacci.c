@@ -6,9 +6,9 @@ int fib(int n) {
     int tmp, i;
     
     for (i = 2; i < n; i++) {
-	tmp = a;
-	a = b;
-	b = b + tmp;	
+        tmp = a;
+        a = b;
+        b = b + tmp;	
     }
     return b;
 }

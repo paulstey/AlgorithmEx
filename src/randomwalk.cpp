@@ -13,10 +13,10 @@ bool at_origin(std::vector<int> coords, int dim) {
     bool res = true;
 
     for (size_t i = 0; i < dim; i++) {
-	if (coords[i] != 0) {
-	    res = false;
-	    break;
-	}
+        if (coords[i] != 0) {
+            res = false;
+            break;
+        }
     }
     return res;
 }
@@ -36,13 +36,13 @@ int random_walk(int nstep, int dim, std::default_random_engine& generator) {
 
     for (size_t i = 0; i < nstep; i++) {
         for (size_t j = 0; j < dim; j++) {
-	    step = rand_unif(generator) < 0.5 ? -1 : 1;
-	    coords[j] += step;
-	}
-	if (at_origin(coords, dim)) {
-	    res = 1;
-	    break;
-	}
+            step = rand_unif(generator) < 0.5 ? -1 : 1;
+            coords[j] += step;
+        }
+        if (at_origin(coords, dim)) {
+            res = 1;
+            break;
+        }
     }
     return res;
 }
@@ -54,7 +54,7 @@ double simulate(int nsim, int nstep, int dim) {
     std::default_random_engine generator(rd());
     
     for (size_t i = 0; i < nsim; i++) {
-	origin_visits += random_walk(nstep, dim, generator);
+        origin_visits += random_walk(nstep, dim, generator);
     }
 
     double res = origin_visits/static_cast<double>(nsim);

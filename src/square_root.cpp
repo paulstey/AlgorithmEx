@@ -1,3 +1,9 @@
+// square_root.cpp
+// Calculate the square root of a number using Newton's method.
+// Author: Paul Stey
+// Date: 2016-08-01
+// CXXFLAGS: -Wall -Wpedantic
+
 #include <iostream>
 #include <cstdlib>
 
